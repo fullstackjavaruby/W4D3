@@ -31,13 +31,13 @@ class Board
     end
 
     def move_piece(start_pos, end_pos)
-        if self[start_pos].nil?
-            raise "no piece at this position"
-        elsif !self[end_pos].nil?
+        if self[end_pos].color == self[start_pos].color
+            raise "no same color at this position"
+        elsif !self.valid_pos(end_pos)
             raise "position is not empty"
         else
             self[end_pos] = self[start_pos]
-            self[start_pos] = nil
+            self[start_pos] = @sentinel
         end
     end
 
