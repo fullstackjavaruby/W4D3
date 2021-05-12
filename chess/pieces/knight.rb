@@ -1,5 +1,6 @@
 require_relative "piece" 
 require "colorize"
+require_relative "step"
 
  class Knight < Piece
   include Stepable
@@ -9,7 +10,7 @@ require "colorize"
 
 
    def move_diffs
-    MOVES_ROW = [2, 2, 1, 1,-2, -2, -1,-1]
-    MOVES_COL = [1,-1, 2,-2, 1, -1, -2, 2]
+    moves = [[2,1], [2,-1], [1, 2], [1,-2], [-2, 1], [-2, 1], [-1, -2], [-1, 2]]
    end
+
  end

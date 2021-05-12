@@ -3,6 +3,7 @@ require "colorize"
 
 
 
+
  class Pawn < Piece
 
    def symbol
